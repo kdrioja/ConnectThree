@@ -30,6 +30,7 @@
             android:layout_height="110dp"
             android:layout_margin="10dp"
             android:onClick="dropin"
+            android:tag="0"
             app:layout_column="0"
             app:layout_row="0" />
 
@@ -40,6 +41,7 @@
             android:layout_margin="10dp"
             android:layout_marginLeft="15dp"
             android:onClick="dropin"
+            android:tag="1"
             app:layout_column="1"
             app:layout_row="0" />
 
@@ -50,6 +52,7 @@
             android:layout_margin="10dp"
             android:layout_marginLeft="13dp"
             android:onClick="dropin"
+            android:tag="2"
             app:layout_column="2"
             app:layout_row="0" />
 
@@ -60,6 +63,7 @@
             android:layout_margin="10dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="3"
             app:layout_column="0"
             app:layout_row="1" />
 
@@ -71,6 +75,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="4"
             app:layout_column="1"
             app:layout_row="1" />
 
@@ -81,6 +86,7 @@
             android:layout_margin="10dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="5"
             app:layout_column="2"
             app:layout_row="1" />
 
@@ -91,6 +97,7 @@
             android:layout_margin="10dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="6"
             app:layout_column="0"
             app:layout_row="2" />
 
@@ -102,6 +109,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="7"
             app:layout_column="1"
             app:layout_row="2" />
 
@@ -112,8 +120,45 @@
             android:layout_margin="10dp"
             android:layout_marginTop="13dp"
             android:onClick="dropin"
+            android:tag="8"
             app:layout_column="2"
             app:layout_row="2" />
 
     </androidx.gridlayout.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/winnerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginRight="157dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/playAgainButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="153dp"
+        android:layout_marginLeft="153dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginRight="154dp"
+        android:layout_marginBottom="43dp"
+        android:onClick="playAgain"
+        android:text="Play Again"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/boardGridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/winnerTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
