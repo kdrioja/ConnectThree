@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
+//import android.widget.GridLayout;
+import androidx.gridlayout.widget.GridLayout;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -74,6 +78,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View view) {
+        androidx.gridlayout.widget.GridLayout gridLayout = findViewById(R.id.boardGridLayout);
+        TextView winnerTextView = findViewById(R.id.winnerTextView);
+        Button playAgainButton = findViewById(R.id.playAgainButton);
 
+        winnerTextView.setVisibility(View.INVISIBLE);
+        playAgainButton.setVisibility(View.INVISIBLE);
+
+        for (int i = 0; i < gridLayout.getChildCount(); i++) {
+            ImageView counter = (ImageView) gridLayout.getChildAt(i);
+            counter.setImageDrawable(null);
+        }
+
+        gameActive = true;
+        activePlayer = 0;
+
+        for (int i = 0; i < gameState.length; i++) {
+            gameState[i] = 2;
+        }
     }
 }
